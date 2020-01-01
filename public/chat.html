@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <title>Socket.IO chat</title>
+    
+    <link href="./css/style.css" rel="stylesheet" />
+
+    <script>
+        let username = sessionStorage.username;
+        let roomname = sessionStorage.roomname;
+        if(!username || !roomname){
+            window.location.href = '/';
+        }
+
+        document.title = 'Welcome! ' + username;
+    </script>
+</head>
+<body>
+    <div id="private">
+        <h3 id="username"></h3>
+        <hr/>
+        <h3>Room Name</h3>
+        <div id='rooms'></div>
+        <h3>Private Chats</h3>
+        <div id="private-chats"></div>
+        <div class="leave-room-div">
+            <button id='leave-room'>Leave Room</button>
+        </div>
+    </div>
+    <ul id="messages"></ul>
+
+    
+    <div class="clear"></div>
+    <form action="">
+        <input id="message" autocomplete="off" /><button>Send</button>
+    </form>
+
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+    <script src='./js//socket.io.js'></script>
+    <script src='./js//chat.js'></script>
+    
+</body>
+</html>
