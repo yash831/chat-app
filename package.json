@@ -1,14 +1,14 @@
 {
-	"name": "socket-demo",
+	"name": "chat-app",
 	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
+	"description": "This is in-memory chat app. It doesnot involve any external database.",
+	"main": "app.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "nodemon app.js"
+		"start": "node app.js"
 	},
 	"keywords": [],
-	"author": "",
+	"author": "Yash Khokhaneshiya",
 	"license": "ISC",
 	"dependencies": {
 		"express": "^4.17.1",
@@ -16,5 +16,8 @@
 	},
 	"devDependencies": {
 		"nodemon": "^2.0.2"
+	},
+	"engines": {
+		"node": "12.x"
 	}
 }
