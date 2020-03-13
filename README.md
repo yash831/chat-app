@@ -1,4 +1,4 @@
-# chat-app
+# Chat Application
 It is the in-memory chat app using NodeJS + Express + Socket IO.
 
 It comes with following features:
